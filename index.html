@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<base href="/">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Louis Poulsen - LED</title>
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+
+	<link rel="stylesheet" href="css/app.css" inline>
+	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+	<script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
+	<script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+	<script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+	<script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
+	<script src="js/modernizr.js" async></script>
+</head>
+
+<body>
+	<a-scene>
+		<a-assets>
+
+			<img id="forest" src="images/forest.png">
+
+			<!-- TRASH -->
+			<img id="pizzaBox" src="images/pizzaBox.jpg">
+			<img id="plasticBag" src="images/plasticBag.png">
+			<img id="cereal" src="images/cereal.jpg">
+			<img id="can" src="images/can.jpe">
+			<img id="canTop" src="images/canTop.png">
+			<img id="plasticBottle" src="images/plasticBottle.jpg">
+			<img id="crisps" src="images/crisps.png">
+			<img id="tubeChips" src="images/tubeChips.jpg">
+			<img id="cookies" src="images/cookies.jpg">
+
+			<!-- AUDIO -->
+			<audio id="intro_1" src="audio/intro_1.mp3"></audio>
+			<audio id="impact_intro" src="audio/impact_intro.mp3"></audio>
+
+			<audio id="calculate_instruction" src="audio/calculate_instruction.mp3"></audio>
+			<audio id="calculate_instructions_last" src="audio/calculate_instructions_last.mp3"></audio>
+			<audio id="calc_step_1" src="audio/calc_step_1.mp3"></audio>
+			<audio id="calc_step_1" src="audio/calc_step_1.mp3"></audio>
+			<audio id="calc_step_2" src="audio/calc_step_2.mp3"></audio>
+			<audio id="calc_step_3" src="audio/calc_step_3.mp3"></audio>
+			<audio id="calc_result" src="audio/calc_result.mp3"></audio>
+
+			<audio id="trees_intro" src="audio/trees_intro.mp3"></audio>
+			<audio id="trees_counter" src="audio/trees_counter.mp3"></audio>
+			<audio id="trees_above_intro" src="audio/trees_above_intro.mp3"></audio>
+			<audio id="trees_above_1" src="audio/trees_above_1.mp3"></audio>
+			<audio id="trees_acres_1" src="audio/trees_acres_1.mp3"></audio>
+			<audio id="trees_acres_2" src="audio/trees_acres_2.mp3"></audio>
+			<audio id="trees_acres_3" src="audio/trees_acres_3.mp3"></audio>
+			<audio id="trees_acres_4" src="audio/trees_acres_4.mp3"></audio>
+			<audio id="trees_acres_5" src="audio/trees_acres_5.mp3"></audio>
+			<audio id="trees_acres_6" src="audio/trees_acres_6.mp3"></audio>
+			<audio id="trees_acres_7" src="audio/trees_acres_7.mp3"></audio>
+			<audio id="trees_acres_8" src="audio/trees_acres_8.mp3"></audio>
+			<audio id="trees_acres_9" src="audio/trees_acres_9.mp3"></audio>
+			<audio id="trees_acres_10" src="audio/trees_acres_10.mp3"></audio>
+			<audio id="trees_end" src="audio/trees_end.mp3"></audio>
+
+			<audio id="cars_intro" src="audio/cars_intro.mp3"></audio>
+			<audio id="cars_counter" src="audio/cars_counter.mp3"></audio>
+			<audio id="cars_end" src="audio/cars_end.mp3"></audio>
+
+			<audio id="trash_counter" src="audio/trash_counter.mp3"></audio>
+			<audio id="trash_lookup" src="audio/trash_lookup.mp3"></audio>
+			<audio id="trash_intro" src="audio/trash_intro.mp3"></audio>
+			<audio id="trash_end" src="audio/trash_end.mp3"></audio>
+
+			<audio id="outro" src="audio/outro.mp3"></audio>
+			<audio id="payoff" src="audio/payoff.mp3"></audio>
+
+			<!-- MODELS -->
+			<a-entity id="lamp_1">
+				<a-box width="0.1" height="1" depth="0.1" color="grey"></a-box>
+			</a-entity>
+			<a-asset-item id="lamp_2" src="models/lamp_2/scene.gltf"></a-asset-item>
+			<a-asset-item id="lamp_3" src="models/lamp_3/scene.gltf"></a-asset-item>
+
+
+			<a-asset-item id="tree" src="models/tree/scene.gltf"></a-asset-item>
+			<a-asset-item id="car" src="models/car/scene.gltf"></a-asset-item>
+			<a-asset-item id="car-obj" src="models/car2/model.obj"></a-asset-item>
+			<a-asset-item id="car-mtl" src="models/car2/materials.mtl"></a-asset-item>
+		</a-assets>
+		<a-camera position="0 2 5" wasd-controls="enabled: false;">
+			<a-entity cursor="fuse: true; fuseTimeout: 0000001" id="cursor" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.015; radiusOuter: 0.03" material="color: #ff6961; shader: flat">
+			</a-entity>
+		</a-camera>
+		<a-sky id="sky"></a-sky>
+
+		<a-box id="#lamp_1" width="0.5" height="8" color="#7b8197" depth="1.2" position="0 4 -15" rotation="0 45 0">
+			<a-plane color="#ffffff" width="0.6" height="2.5" position="-0.324 2.258 0.047" rotation="0 -90 0"></a-plane>
+		</a-box>
+	</a-scene>
+	<script src="js/main.js" async defer></script>
+</body>
+
+</html>
